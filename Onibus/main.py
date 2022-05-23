@@ -1,7 +1,5 @@
 from onibus import Onibus
 
-# Py
-
 class NotInRangeException(Exception):
     pass
 
