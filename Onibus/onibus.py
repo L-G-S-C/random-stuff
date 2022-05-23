@@ -1,5 +1,5 @@
 from logging import generateLog
-
+from typing import List
 
 class Onibus:
     """
@@ -12,10 +12,10 @@ class Onibus:
     """
     
     def __init__(self):
-        self.matrix_seats: list[list[int]] = self._createBusLayout()
+        self.matrix_seats: List[List[int]] = self._createBusLayout()
         generateLog('Instancia do onibus criada.')
 
-    def _createBusLayout(self) -> list[list[int]]:
+    def _createBusLayout(self) -> List[List[int]]:
         """
         Create layout of bus' seats following these guidelines:
         
@@ -50,7 +50,7 @@ class Onibus:
                 print('Escolha um acento dentro da matriz.')
         
     
-    def generateRelatorio(self):
+    def generateRelatorio(self) -> None:
         vendidos = 0
         abertos = 0
         for row in range(0, len(self.matrix_seats)):
